@@ -1,0 +1,503 @@
+/**********************************************************************************************************
+*******************************************ESTILOS index.php***********************************************
+**********************************************************************************************************/
+:root {
+    /*para crear variables en CSS, -- seguido del nombre que se le quiera poner, se pueden crear tantas como se necesiten*/
+    --colorFondo: white;
+    --hover: darkcyan;
+    --fondoMenu: rgb(34, 0, 34);
+	--colorTexto: white;
+}
+
+html, body {
+	margin:0;
+	padding:0px;
+	font-size:20px;
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	background-image: url(../asset/images/logo3.jpg);
+	background-attachment: fixed;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/****************************************** Estilos de los enlaces****************************************/
+
+a {
+	text-decoration: none;
+	color: var(--colorTexto);
+}
+
+/**********************************************************************************************************
+*******************************************Divs del encabezado*********************************************
+**********************************************************************************************************/
+
+header {
+	background-color: var(--fondoMenu);
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+/******************************************* Div del menú de la página *********************************/
+
+.div_menu {
+	text-align: center;
+	margin-left: 10px;
+}
+
+.div_menu a {
+	color: var(--colorTexto);
+	font-size: 18px;
+}
+
+/***************************** Estilos comunes de los botones de navegación *****************************/
+
+.boton,.boton:hover {
+	display:inline-block;
+	padding: 5px 30px;
+	white-space: nowrap;
+	margin: 15px 5px 15px;
+	border-radius: 6px;
+}
+
+/**************************** Estilos independientes de los botones de navegación *******************************/
+
+.boton.active {
+	background-color: gray;
+}
+
+.boton:hover {
+	background-color: var(--hover);
+	transition: 1s;
+}
+
+/**********************************************************************************************************
+*******************************************Div del contenido**********************************************
+**********************************************************************************************************/
+
+main {
+	text-align: center;
+}
+
+.div1 p {
+	text-align: justify;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.div1 {
+	padding: 6%;
+}
+
+/*********************************************Estilos de los biseles*********************************************/
+
+.bisel-abajo {
+    /*0 al borde arriba, 0 al borde derecho, 15 viewport height al borde abajo, y 100 viewport width al borde izquierdo*/
+    border-width: 0 0 15vh 100vw;
+    /*borde arriba transparente, borde derecho transparente, borde abajo del mismo color de fondo de la página, y borde izquierdo transparente*/
+    border-color: transparent transparent var(--colorFondo) transparent;
+    border-style: solid;
+}
+
+.bisel-arriba {
+    /*15 viewport height al borde arriba, 100 viewport width al borde derecho, 0 al borde abajo, y 0 al borde izquierdo*/
+    border-width: 15vh 100vw 0 0;
+    /*borde arriba del mismo color de fondo de la página, borde derecho transparente, borde abajo transparente, y borde izquierdo transparente*/
+    border-color: var(--colorFondo) transparent transparent transparent;
+    border-style: solid;
+}
+
+/******************************************Estilos del slider de imagenes******************************************/
+
+#slider {
+	box-sizing: border-box;
+	width:100vw;
+	padding: 1%;
+	padding-bottom: 5%;
+	background-color: var(--colorFondo);
+}
+
+.flechas {
+	display: inline-block;
+	vertical-align: 100px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.fotos {
+	display: inline-block;
+	width: 480px;
+	height: 300px;
+	border: 2px solid black;
+}
+
+.ocultas {
+	display: none;
+}
+
+.op80 {
+	opacity: 0.40;
+	width: 350px;
+	height: 230px;
+	border: none;
+}
+
+/********************************************Estilos del último div*********************************************/
+.div3 {
+	box-sizing: border-box;
+	padding: 5%;
+}
+
+.img_section1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.img_section1 img {
+	height: 230px;
+	width: 100%;
+}
+
+.img_section1 figcaption {
+	text-align: center;
+}
+
+/**********************************************************************************************************
+***********************************************Div de footer.php*******************************************
+**********************************************************************************************************/
+
+footer {
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	color: var(--colorTexto);
+	background-color: var(--fondoMenu);
+	padding: 30px;
+}
+
+footer a {
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+}
+
+footer .logo_redes {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+
+/**********************************************************************************************************
+*******************************************ESTILOS registro.php********************************************
+**********************************************************************************************************/
+
+.enlace-registro {
+	padding-top: 35px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.enlace-registro a {
+	color: blue;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+
+/********************************************Estilos del formulario*********************************************/
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+/**********************************Estilos para los elementos del div container********************************/
+.container *{
+    box-sizing: border-box;
+}
+
+/***********************************************Estilos de las listas*****************************************/
+.flex-outer, .flex-inner{
+    list-style-type: none;
+    padding: 0;
+}
+
+/*******************************************Estilos de la lista principal*************************************/
+.flex-outer{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-outer li, .flex-inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*******************************************Estilos de la lista secundaria*************************************/
+.flex-inner{
+    padding: 0 8px;
+    justify-content:space-between;
+}
+
+.flex-outer > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+/*******************************************Estilos de labels y p*************************************/
+.flex-outer li label, .flex-outer li p{
+    padding: 8px;
+    font-weight: 200;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.flex-outer > li >label, .flex-outer li p{
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-outer > li > label + *, .flex-inner{
+    flex: 1 0 220px;
+}
+
+.flex-outer li input:not([type='radio']), .flex-outer li textarea{
+    padding: 15px;
+    border: none;
+}
+
+.flex-outer li select {
+    padding: 15px;
+    border: none;
+}
+
+/*******************************************Estilos de los botones*************************************/
+.flex-outer .liButtons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-outer .liButtons button{
+    background-color: gray;
+    color: var(--colorTexto);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+	padding: 5px 30px;
+	margin-left: auto;
+	border-radius: 6px;
+	font-size: large;
+}
+
+.flex-outer .liButtons button:hover {
+	background-color: var(--hover);
+	transition: 1s;
+	cursor: pointer;
+}
+
+/************************************Estilos de las etiquetas para errores*********************************/
+.container span{
+    margin-inline-start: 28%;
+	color: red;
+	display: flex;
+}
+
+/**********************************************************************************************************
+*******************************************ESTILOS verNoticias.php********************************************
+**********************************************************************************************************/
+.principal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.small-card{
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 1% 1%;
+	width: 30vw;
+    height: 80vh;
+	background-color: var(--colorFondo);
+}
+
+.small-card * {
+	align-self: center;
+}
+
+.small-card span {
+	align-self: flex-start;
+}
+
+.card-title {
+	background-color: var(--fondoMenu);
+	color: var(--colorTexto);
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+}
+
+.card-img {
+	width: 80%;
+	height: 40%;
+}
+
+.card-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: scroll;
+	text-align: justify;
+	height: 40%;
+	min-width: 100%;
+}
+
+.card-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-buttons a {
+	background-color: gray;
+    color: var(--colorTexto);
+    letter-spacing: 0.09em;
+	padding: 5px 30px;
+	border-radius: 6px;
+}
+
+.card-buttons a:hover {
+	background-color: var(--hover);
+	transition: 1s;
+	cursor: pointer;
+}
+
+/**********************************************************************************************************
+*******************************************ESTILOS verUsuarios.php********************************************
+**********************************************************************************************************/
+
+.smallest-card{
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 1% 1%;
+	width: 30vw;
+	background-color: var(--colorFondo);
+}
+
+.smallest-card * {
+	align-self: center;
+}
+
+.little-title {
+	background-color: var(--fondoMenu);
+	color: var(--colorTexto);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/**********************************************************************************************************
+*******************************************ESTILOS citaciones.php********************************************
+**********************************************************************************************************/
+.container-citas{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 80%;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+.flex-outer-citas{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.flex-outer-citas li {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	list-style-type: none;
+}
+
+.flex-outer-citas li label {
+    padding: 8px;
+    font-weight: 200;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.flex-outer-citas > li >label {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-outer-citas > li > label + * {
+    flex: 1 0 220px;
+}
+
+.flex-outer-citas > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.flex-outer-citas .liButtons{
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.flex-outer-citas .liButtons button, .flex-outer-citas .liButtons a{
+    background-color: gray;
+    color: var(--colorTexto);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+	padding: 5px 30px;
+	border-radius: 6px;
+	font-size: large;
+	margin-bottom: 2%;
+}
+
+.flex-outer-citas .liButtons button:hover, .flex-outer-citas .liButtons a:hover {
+	background-color: var(--hover);
+	transition: 1s;
+	cursor: pointer;
+}
+
+/**********************************************************************************************************
+***************************************ESTILOS listaUsuarios.php*******************************************
+**********************************************************************************************************/
+table, th, tr, td {
+	margin: 1% 2% 1%;
+	padding: 0.5%;
+	border-bottom: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table {
+	width: 80%;
+}
+
+th {
+	background-color: var(--fondoMenu);
+	color: var(--colorTexto);
+}
+
+tr:hover {
+	background-color: var(--hover);
+}
